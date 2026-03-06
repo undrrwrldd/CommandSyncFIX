@@ -30,10 +30,10 @@ public class ClientThread extends Thread {
 		this.heartbeat = heartbeat;
 		this.name = name;
 		this.pass = pass;
-		connect(false);
 	}
 	
 	public void run() {
+		connect(false);
 		while(true) {
 			if(connected) {
 				out.println("heartbeat");
